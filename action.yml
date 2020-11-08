@@ -1,0 +1,27 @@
+name: 'Domain check'
+description: 'Ping array of domain names'
+inputs:
+  TELEGRAM_TOKEN: 
+    description: 'Telegram access token'
+    required: true
+  TELEGRAM_CHAT_ID: 
+    description: 'Telegram chat ID'
+    required: true
+  domains:  # id of input
+    description: 'Array of domains'
+    required: true
+    # default: ''
+# outputs:
+#   time: # id of output
+#     description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.TELEGRAM_TOKEN }}
+    - ${{ inputs.TELEGRAM_CHAT_ID }}
+    - ${{ inputs.domains }}
+
+branding:
+  icon: 'check-circle'
+  color: 'blue'
