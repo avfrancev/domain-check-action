@@ -3,10 +3,14 @@
 echo "Starting..."
 echo $arg
 echo "Hello $1"
-echo "Hello $arg"
+echo "Hello ${INPUT_DOMAINS}"
+for INPUT_DOMAINS; do
+  echo -e "===> ${1}"
+done
 for arg; do
   echo -e ">>> ${1}"
 done
+
 # FAIL_CODE=6
 
 # LRED="\033[1;31m"   # Light Red
