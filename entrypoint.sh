@@ -3,6 +3,7 @@
 domains=$(echo $INPUT_DOMAINS | tr ";" "\n")
 
 echo "Starting..."
+echo "[$domains]"
 
 # for x in $domains; do
 #   echo "> [$x]"
@@ -27,7 +28,7 @@ check_status() {
 
   if [ ! $? = ${FAIL_CODE} ]; then
     echo -e "${LGREEN}${1} is online${NC}"
-    ./telegram.sh -t "${TELEGRAM_TOKEN}" -c "${TELEGRAM_CHAT_ID}" "${1} is online"
+    # ./telegram.sh -t "${TELEGRAM_TOKEN}" -c "${TELEGRAM_CHAT_ID}" "${1} is online"
   else
     echo -e "${LRED}${1} is down${NC}"
     ./telegram.sh -t "${TELEGRAM_TOKEN}" -c "${TELEGRAM_CHAT_ID}" "${1} is down"
