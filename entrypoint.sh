@@ -31,7 +31,7 @@ check_status() {
     # ./telegram.sh -t "${TELEGRAM_TOKEN}" -c "${TELEGRAM_CHAT_ID}" "${1} is online"
   else
     echo -e "${LRED}${1} is down${NC}"
-    /telegram.sh -t "${TELEGRAM_TOKEN}" -c "${TELEGRAM_CHAT_ID}" "${1} is down"
+    /telegram.sh -t "${INPUT_TELEGRAM_TOKEN}" -c "${INPUT_TELEGRAM_CHAT_ID}" "${1} is down"
     status=1
   fi
 }
