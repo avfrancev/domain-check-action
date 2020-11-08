@@ -5,12 +5,12 @@ domains=$(echo $INPUT_DOMAINS | tr ";" "\n")
 echo "Starting..."
 echo "[$domains]"
 
-# for x in $domains; do
-#   echo "> [$x]"
-# done
-# for arg; do
-#   echo -e ">>> ${1}"
-# done
+for x in $domains; do
+  echo "> [$x]"
+done
+for domain; do
+  echo -e ">>> ${1}"
+done
 
 FAIL_CODE=6
 
@@ -36,7 +36,7 @@ check_status() {
   fi
 }
 
-for $domain; do
+for domain; do
   echo '------'
   check_status "${1}"
 done
