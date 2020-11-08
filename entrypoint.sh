@@ -1,11 +1,13 @@
 #!/bin/bash
 
+domains=$(echo $INPUT_DOMAINS | tr ";" "\n")
+
 echo "Starting..."
 echo $arg
 echo "Hello $1"
 echo "Hello ${INPUT_DOMAINS}"
-for INPUT_DOMAINS; do
-  echo -e "===> ${1}"
+for x in $domains; do
+  echo "> [$x]"
 done
 for arg; do
   echo -e ">>> ${1}"
