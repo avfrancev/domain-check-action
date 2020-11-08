@@ -18,8 +18,8 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.TELEGRAM_TOKEN }}
-    - ${{ inputs.TELEGRAM_CHAT_ID }}
+    # - ${{ inputs.TELEGRAM_TOKEN }}
+    # - ${{ inputs.TELEGRAM_CHAT_ID }}
     - ${{ inputs.domains }}
 
 branding:
