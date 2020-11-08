@@ -36,8 +36,9 @@ check_status() {
   fi
 }
 
-for x in $domain; do
-  check_status $x
+for $domain; do
+  echo '------'
+  check_status "${1}"
 done
 
 if (( status )); then
