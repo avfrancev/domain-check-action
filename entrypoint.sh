@@ -22,7 +22,7 @@ status=0
 
 check_status() {
 
-  echo "Checking ${1}..."
+  echo "Checking ${1} ..."
   
   curl "${1}" >/dev/null
 
