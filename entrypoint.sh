@@ -2,7 +2,8 @@
 
 echo "Starting..."
 echo $arg
-
+echo "Hello $1"
+echo "Hello $arg"
 # FAIL_CODE=6
 
 # LRED="\033[1;31m"   # Light Red
