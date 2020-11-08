@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Starting..."
+echo $arg
+
 FAIL_CODE=6
 
 LRED="\033[1;31m"   # Light Red
