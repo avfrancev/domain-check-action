@@ -24,7 +24,7 @@ check_status() {
 
   echo "Checking ${1}..."
   
-  curl -sf "${1}" >/dev/null
+  curl "${1}" >/dev/null
 
   if [ ! $? = ${FAIL_CODE} ]; then
     echo -e "${LGREEN}${1} is online${NC}"
